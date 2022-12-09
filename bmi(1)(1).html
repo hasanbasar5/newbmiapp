@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Carter+One&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Carter+One&family=Gantari&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Carter+One&family=Ceviche+One&family=Kanit:wght@500;600&family=Monoton&family=Pacifico&family=Paytone+One&family=Permanent+Marker&family=Poppins&family=Ravi+Prakash&family=Reggae+One&family=Roboto:wght@300&family=Russo+One&family=Staatliches&family=Zen+Dots&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        body {
+      /*   background-image: url(https://blog.prezi.com/wp-content/uploads/2019/03/jason-leung-479251-unsplash.jpg);
+          background-position: center;
+          background-size: cover; */
+            width: 100%;
+
+            height: fit-content;
+           /*  background-image: linear-gradient(black 20%,violet); */
+           background-color: #00203fff;
+        }
+        /* body::before{
+            content: " ";
+            width: 100%;
+            height: 100%;
+            background-color: black;
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: .1;
+            z-index: -1;
+        } */
+
+        .fa-bars {
+            color: white;
+            font-size: 2em;
+            position: absolute;
+            top: 20px;
+            right: 50px;
+
+        }
+        .fa-bars:hover{
+            color:#00203fff;
+        }
+
+        .fa-bars:hover~ol {
+            display: block;
+            background-color: white;
+            font-size: 1.6em;
+            color: #00203fff;
+            width: 180px;
+            margin-top: -50px;
+            height: fit-content;
+            padding: 10px;
+            list-style-type: none;
+            transition: all;
+            transition-duration: 2s;
+            animation-name: ani;
+            animation-duration: 2s;
+            z-index: +1;
+
+        }
+
+
+        @keyframes ani {
+            from {
+                transform: translateX(300px);
+            }
+
+            to {
+                transform: translateX(0px);
+            }
+        }
+
+        ol {
+            display: none;
+            position: absolute;
+            top: 46px;
+            right: 0;
+        }
+
+        ol li {
+            margin-top: 40px;
+        }
+
+        #logo {
+            font-size: 3em;
+            color: gray;
+            text-align: left;
+            margin-left: 10%;
+            margin-top: 10px;
+            position: absolute;
+            top: 0px
+        }
+
+         #w {
+            border: none;
+            background:none;
+            border-bottom: 1px solid white !important;
+            color:white;
+            width: 250px;
+            height: 50px;
+            padding-left: 20px;
+            outline: none;
+            font-weight: bolder;
+            font-size: 1.2em;
+            margin-top: -10px;
+            font-family: 'Gantari', sans-serif;
+
+
+        }
+
+        #h {
+            border: none;
+            background:none;
+            border-bottom: 1px solid white; 
+            color: white;
+            width: 250px;
+            height: 50px;
+            padding-left: 20px;
+         outline: none;
+         font-weight: bolder;
+            font-size: 1.2em;
+            margin-top: -10px;
+            font-family: 'Gantari', sans-serif;
+        }
+
+        #wlab {
+   
+            font-size: 1.4em;
+            color: white;
+            font-weight: bolder;
+            left: 11%;
+            align-self: flex-start;
+            font-family: 'Gantari', sans-serif;
+           
+        }
+
+        #lab {
+           margin-top: 20px;
+            font-size: 1.4em;
+            color: white;
+            font-weight: bolder;
+            font-family: 'Gantari', sans-serif;
+        }
+
+        button {
+            width: 200px;
+            height: 40px;
+            background-color:white;
+            color:#00203fff; 
+            font-weight: lighter;
+            border: none;
+            align-self: center;
+            font-family: 'Gantari', sans-serif;
+            font-size: 1.2em;
+            font-weight: bolder;
+            padding: 10px;
+            margin-top: 20px;
+            border-radius: 10px;
+    
+        }
+
+        button:hover {
+            transform: scale(1.1);
+         
+        }
+
+        h4 {
+            text-align: center;
+            font-size: 1.1em;
+            color:#00203fff;
+            background-color: white;
+            width: fit-content;
+            height: fit-content;
+            padding: 10px;
+            margin: auto;
+            font-family: 'Gantari', sans-serif;
+            margin-top: 30px;
+            font-weight: bolder;
+          
+        }
+
+        .bottom {
+            width: 100%;
+            height: 60px;
+            background-color: white;
+            border-radius: 40px 40px 0px 0px;
+            position: fixed;
+            bottom: 0%;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+      
+        #f-1:hover{
+            transform: scale(1.1);
+            color:#00203fff !important;
+        }
+        #f-2:hover{
+            transform: scale(1.1);
+            color: #00203fff !important;
+        }
+        #f-3:hover{
+            transform: scale(1.1);
+            color: #00203fff !important;
+        }
+        #f-4:hover{
+            transform: scale(1.1);
+            color: #00203fff !important;
+        }
+        .main{
+            width: 100%;
+            height: 100vh;
+           display: flex;
+           justify-content: center;
+           align-items: center;
+          
+        }
+        .main-1{
+            display: flex;
+            height: fit-content;
+            width: fit-content;
+            flex-direction: column;
+            align-items:flex-start;
+            gap: 10px;
+        }
+        .user{
+            width: 100%;
+            height: fit-content;
+            margin-bottom: 50px;
+            display: none;
+           
+            
+        }
+        .user input{
+            border: none;
+            background:none;
+            border-bottom: 1px solid white;
+            outline: none;
+            color: white;
+            font-size: 1.1em;
+            margin: auto;
+            font-family: 'Gantari', sans-serif;
+        }
+    .user label{
+            width: 70px;
+            font-family: 'Gantari', sans-serif;
+            color: white;
+           margin-left: 5%;
+            font-size: 1.2em;
+        }
+        .uname,.uage,.uw,.uh{
+            display: flex;
+            gap: 20px;
+            align-items: center;
+           
+            margin-top: 30px;
+           
+        }
+        .gender{
+            display: flex;
+            gap: 0px;
+            align-items: center;
+            margin-top: 30px;
+            
+        }
+    
+    </style>
+</head>
+
+<body>
+    <!-- <h1>Body Mass Index Calculator</h1>
+    <p>Enter your height: <input type="text" id="height"/>
+        <select type="multiple" id="heightunits">
+            <option value="metres" selected="selected">metres</option>
+            <option value="inches">inches</option>
+        </select>
+    </p>
+    <p>Enter your weight: <input type="text" id="weight"/>
+        <select type="multiple" id="weightunits">
+            <option value="kg" selected="selected">kilograms</option>
+            <option value="lb">pounds</option>
+        </select>
+    </p>
+    <input type="submit" value="computeBMI" onclick="computeBMI();">
+    <h1>Your BMI is: <span id="output">?</span></h1>
+
+    <h2>This means you are: value = output </h2>  -->
+    <div class="full ran1"></div>
+    <div class="full2 ran1"></div>
+    <div class="full3 ran1"></div>
+
+    <h2 id="logo">
+        <img src="https://mostaql.hsoubcdn.com/uploads/thumbnails/1387687/629b05a39f8d1/bmi3.png" width="50px">
+    </h2>
+    <i class="fa-solid fa-bars"></i>
+    <ol>
+        <li>Home</li>
+        <li>BMI</li>
+        <li>About</li>
+        <li>Contact</li>
+        <li>Version</li>
+    </ol>
+    <div class="main">
+        <div class="main-1">
+
+        <label id="wlab">Weight</label>
+        <input type="text" id="w" placeholder="Enter your weight in kg">
+        <label id="lab">Height</label>
+        <input type="text" id="h" placeholder="Enter your height in cm">
+        <button onclick="total()">Calculate BMI</button>
+        <h4>Your BMI is</h4>
+    </div>
+    </div>
+    <div class="user">
+        <h4><b>Hello,</b></h4>
+        <div class="uname">
+        <label>Name</label>    <input type="text" name="name" id="u1">
+        </div>
+        <div class="uage">
+            <label>Age</label>    <input type="number" name="name">
+            </div>
+            
+                <div class="uw">
+                    <label>Weigth</label>    <input type="number" name="name">
+                    </div>
+                    <div class="uh">
+                        <label>Heigth</label>    <input type="number" name="name">
+                        </div>
+                        <div class="gender" >
+                            <label>Gender</label> <input type="radio"name="name" id="m"><label for="m">Male</label>
+                <input type="radio"name="name" id="f"><label for="f">Female</label>
+                            </div>
+                            <button style="border: none;color: #00203fff;background-color: white;margin-left: 24%;margin-top: 30px;font-family: 'Gantari', sans-serif;font-weight: bold;">Done</button>
+    </div>
+    <div class="bottom">
+
+        <div>
+            <i class="fa-solid fa-house" id="f-1" style="color:#353333;font-size: 1.5em;"></i>
+        </div>
+        <div>
+            <i class="fa-solid fa-circle-info" id="f-2" style="color:#353333;font-size: 1.5em;"></i>
+        </div>
+        <div>
+            <i class="fa-solid fa-person" id="f-3" style="color:#353333;font-size: 1.6em;font-weight: bold  ;"></i>
+        </div>
+        <div>
+            <i class="fa-solid fa-user" id="f-4" style="color:#353333;font-size: 1.5em;"></i>
+        </div>
+    </div>
+    <script>
+
+        function total() {
+            let height = document.querySelector("#h").value;
+            let weight = document.querySelector("#w").value;
+            let height1 = height / 100;
+            let bmi = Math.round(weight / (height1 * height1));
+
+            let output = document.getElementsByTagName("h4")[0];
+            output.innerHTML = "Your BMI is :" + bmi;
+            let type = document.getElementsByTagName("h5")[0];
+        }
+        let home = document.querySelector("#f-1");
+        let about = document.querySelector("#f-2");
+        let range = document.querySelector("#f-3");
+        let set = document.querySelector("#f-4");
+        let mainpage = document.querySelector(".main");
+        let full = document.querySelector(".full");
+        let full1 = document.querySelector(".full2");
+        let full2 = document.querySelector(".full3");
+       let userdet=document.querySelector(".user")
+        let blocks=document.querySelectorAll(".ran1");
+        let blo=document.querySelectorAll(".bottom div");
+        about.addEventListener("click", abt);
+        blo.forEach((e)=>{
+          
+
+        })
+        function abt() {
+           /*  blocks.forEach((el)=>{
+                    console.log("el");
+                    el.style.display="none";
+                }) */
+                let a=[...full.children];
+           console.log(a);
+                a.forEach((e)=>{
+                    e.remove();
+                })
+                full2.style.display="none"
+                full1.style.display="none"
+            full.style.display = "block"
+            mainpage.style.display = "none";
+            let div1 = document.createElement("div");
+            full.appendChild(div1);
+            div1.style.padding = "15px"
+            let hed = document.createElement("h2");
+            div1.appendChild(hed);
+            hed.innerHTML = "What is BMI ?";
+            hed.style.fontSize = "1.4em";
+            hed.style.marginTop = "100px";
+            hed.style.marginLeft = "4%";
+            hed.style.color = "white";
+            hed.style.fontFamily =  "'Gantari', sans-serif";
+
+            let cnt = document.createElement("p");
+            div1.appendChild(cnt);
+            cnt.style.fontSize = "1.1em";
+            cnt.style.fontFamily =  "'Gantari', sans-serif";
+            cnt.style.marginTop = "30px"
+            cnt.style.width = "300px"
+            cnt.style.color = "white"
+            cnt.style.paddingLeft = "10%";
+            cnt.style.textAlign = "left";
+            cnt.style.lineHeight = "1.6";
+            cnt.innerHTML = "Body Mass Index is a abbreviation of BMI.It is is a measure that uses your height and weight to work out if your weight is healthy.The BMI calculation divides a weight in kilograms by their height in metres squared. For example, A BMI of 25 means 25kg/m2.";
+            let acc = document.createElement("h3");
+            div1.appendChild(acc);
+            acc.style.fontSize = "1.4em"
+            acc.style.color = "white";
+            acc.style.marginLeft = "4%";
+            acc.style.marginTop = "20px";
+            acc.style.fontFamily= "'Gantari', sans-serif";
+            acc.innerHTML = "Accuracy of BMI:";
+            let acnt = document.createElement("p");
+            div1.appendChild(acnt);
+            acnt.innerHTML = "✓ BMI takes into account natural variations in body shape, giving a healthy weight range for a particular height.<br>✓ As well as measuring your BMI, healthcare professionals may take other factors into account when assessing if you're a healthy weight.<br>✓ Muscle is much denser than fat, so very muscular people, such as heavyweight boxers, weight trainers and athletes, may be a healthy weight even though their BMI is classed as obese.<br>✓ Your ethnic group can also affect your risk of some health conditions. For example, adults of South Asian origin may have a higher risk of some health problems, such as diabetes, with a BMI of 23, which is usually considered healthy.You should not use BMI as a measure if you're pregnant. Get advice from your midwife or GP if you're concerned about your weight.";
+            acnt.style.color = "white";
+            acnt.style.fontSize = "1.1em";
+            acnt.style.fontFamily =  "'Gantari', sans-serif";
+            acnt.style.marginTop = "30px"
+            acnt.style.paddingLeft = "10%";
+            acnt.style.textAlign = "left";
+            acnt.style.lineHeight = "1.6";
+            acnt.style.paddingBottom = "70px"
+        }
+        home.addEventListener("click", hom);
+        function hom() {
+            full1.style.display="none"
+            mainpage.style.display = "flex";
+            full.style.display = "none";
+            full2.style.display="none";
+        }
+        range.addEventListener("click", ran);
+        function ran() {
+            let a=[...full2.children];
+           console.log(a);
+                a.forEach((e)=>{
+                    e.remove();
+                })
+                full2.style.display = "block"
+                full1.style.display="none"
+                userdet.style.display="none"
+            mainpage.style.display = "none";
+            full.style.display="none"
+            let ran1 = document.createElement("div");
+            full2.appendChild(ran1);
+            let ranhed = document.createElement("h2");
+            ran1.appendChild(ranhed);
+            ranhed.innerHTML = "BMI Ranges";
+            ranhed.style.color = "white";
+            ranhed.style.fontFamily = "'Gantari', sans-serif";
+            ranhed.style.marginTop = "100px";
+            ranhed.style.marginLeft = "4%";
+            ranhed.style.fontSize = "1.6em";
+            let rcnt = document.createElement("h6");
+            full2.appendChild(rcnt);
+            rcnt.innerHTML = "If your BMI is:";
+            rcnt.style.color = "white";
+            rcnt.style.fontSize = "1.2em";
+            rcnt.style.marginTop = "40px"
+            rcnt.style.paddingBottom = "20px"
+
+            rcnt.style.marginLeft = "4%"
+            rcnt.style.fontFamily =  "'Gantari', sans-serif";
+            let rcnt1 = document.createElement("p");
+            full2.appendChild(rcnt1);
+            rcnt1.innerHTML = "☑ Below <b>18.5</b>   you're in the underweight range.<br><br>☑ Between <b>18.5</b> and <b>24.9</b>  you're in the healthy weight range.<br><br>☑ Between <b>25</b> and <b>29.9</b>  you're in the overweight range.<br><br>☑ <b>30</b> or over  you're in the obese range"
+            rcnt1.style.color = "white";
+            rcnt1.style.color = "white";
+            rcnt1.style.fontSize = "1.2em";
+            rcnt1.style.marginTop = "20px"
+            rcnt1.style.paddingLeft = "10%";
+            rcnt1.style.textAlign = "left";
+            rcnt1.style.lineHeight = "1.4";
+            rcnt1.style.fontFamily =  "'Gantari', sans-serif";
+            let rimg=document.createElement("img");
+            full2.appendChild(rimg);
+            rimg.src="Assets/range.png"
+            rimg.style.width= "100% ";
+            rimg.style.height= "fit-content ";
+            rimg.style.marginBottom= "50px";
+ 
+        }
+        set.addEventListener("click",user);
+        function user(){
+               let a=[...full1.children];
+           console.log(a);
+                a.forEach((e)=>{
+                    e.remove();
+                })
+               
+            full2.style.display = "none"
+            mainpage.style.display = "none";
+            full.style.display="none";
+            userdet.style.display="block"
+            userdet.style.marginTop="160px"
+          
+           
+
+        } 
+
+
+
+        /*    if(bmi < 18.5){
+              type.innerHTML="Your underweight";
+            }
+            else if(bmi >= 18.5 && bmi < 25){
+                type.innerHTML="Your weigth is good";
+            }
+            else if(bmi > 25 && bmi <= 30){
+                type.innerHTML="Your overweight";
+            }
+           else{
+            alert("ENTER CRT HEIGHT AND WWEIGHT")
+           }  */
+
+
+        /*   function computeBMI()
+          {
+              //Obtain user inputs
+              var height=Number(document.getElementById("height").value);
+              var heightunits=document.getElementById("heightunits").value;
+              var weight=Number(document.getElementById("weight").value);
+              var weightunits=document.getElementById("weightunits").value;
+  
+  
+              //Convert all units to metric
+             
+  
+              //Perform calculation
+              var BMI=weight/(height*height);
+  
+              //Display result of calculation
+              document.getElementById("output").innerText=Math.round(BMI*100)/100;
+  
+              if (output<18.5)
+              document.getElementById("comment").value = "Underweight";
+              if (output>=18.5 && output<=25)
+              document.getElementById("comment").value = "Normal";
+              if (output>=25 && output<=30)
+              document.getElementById("comment").value = "Obese";
+              if (output>30)
+              document.getElementById("comment").value = "Overweight";
+              document.getElementById("answer").value = output; 
+          } */
+
+    </script>
+</body>
+
+</html>
